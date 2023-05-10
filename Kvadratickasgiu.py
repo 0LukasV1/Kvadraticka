@@ -21,20 +21,20 @@ def executor():
     kc = int(c.get())
     d = kb**2 - 4*ka*kc
     if d <0:
-        label = tk.Label(win, text="Nemá riešenie")
+        label = tk.Label(win, text="nema riesenie")
         label.pack()
     elif d==0:
         jednox = -kb / (2 * ka)
-        label = tk.Label(win, text = jednox)
+        label = tk.Label(win, text = "ma jedno x")
         label.pack()
     else:
         xjedna = ((-kb+d**0.5)/(2*ka))
         xdva = ((-kb-d**0.5)/(2*ka))
         xx = xjedna,xdva
-        label = tk.Label(win, text = xx)
+        label = tk.Label(win, text = "ma dve x")
         label.pack()
 
-button = tk.Button(win, text = "Vyriešiť", command = executor)
+button = tk.Button(win, text = "vyries", command = executor)
 button.pack()
 
 win.mainloop()
